@@ -1,0 +1,36 @@
+.app {
+  background: #e2e2e2;
+  display: grid;
+  font-family: Arial, Helvetica, sans-serif;
+  grid-template-areas:
+    'header'
+    'content'
+    'footer';
+  grid-template-columns: auto;
+  grid-template-rows: 50px auto auto;
+}
+
+.header {
+  display: flex;
+  grid-area: header;
+  align-items: center;
+  width: 100%;
+  margin: 1rem auto 0;
+  max-width: min(95%, 2000px);
+}
+
+.content {
+  margin: 0 auto;
+  max-width: min(95%, 2000px);
+  grid-area: content;
+}
+
+.footer {
+  background-color: #fff;
+  color: #333333;
+  font-size: 0.9rem;
+  grid-area: footer;
+  padding: 1rem 0;
+  text-align: center;
+  width: 100%;
+}

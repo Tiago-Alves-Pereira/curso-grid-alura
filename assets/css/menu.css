@@ -1,0 +1,11 @@
+.menu__link {
+  color: #333333;
+  margin: 0 1rem 0.5rem 0;
+  text-decoration: none;
+  transition: 100ms;
+}
+
+.menu__link:hover,
+.menu__link.ativo {
+  border-bottom: 3px solid #0073e6;
+}

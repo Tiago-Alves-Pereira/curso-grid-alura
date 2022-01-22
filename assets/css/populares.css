@@ -1,0 +1,131 @@
+.populares {
+  margin: 3rem auto;
+}
+
+.populares__itens {
+  margin-bottom: 3rem;
+}
+
+.populares__conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: card-content;
+  padding: 0.5rem 0;
+}
+
+.populares__card {
+  background: #fdfdfd;
+  display: grid;
+  grid-template-areas:
+    'card-head'
+    'card-body';
+  grid-template-columns: 100%;
+  grid-template-rows: 173px auto;
+}
+
+.populares__card:last-child {
+  margin: 0;
+}
+
+.populares__card___imagem {
+  grid-area: card-head;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.populares__card___corpo {
+  display: grid;
+  grid-area: card-body;
+  grid-row-gap: 0.5rem;
+  grid-template-areas:
+    'card-title'
+    'card-description';
+  grid-template-rows: 50px auto;
+  padding: 1rem;
+}
+
+.populares__card___titulo {
+  color: #333333;
+  font-size: 1.3rem;
+}
+
+.populares__card___data {
+  color: #808080;
+  font-size: 0.9rem;
+  font-weight: lighter;
+}
+
+.populares__card___descricao {
+  color: #333333;
+  line-height: 1.5;
+  margin: 1rem 0;
+  text-align: justify;
+}
+
+.populares__cabecalho {
+  border-bottom: 1px solid #d1d1d1;
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.populares__titulo {
+  font-weight: 600;
+  color: #333333;
+}
+
+.populares__botao {
+  background: transparent;
+  border: 1px solid #adadad;
+  padding: 1rem 2rem;
+  margin-bottom: 0.5rem;
+  transition: 200ms;
+  color: #333333;
+}
+
+.populares__icone {
+  margin-right: 0.5rem;
+}
+
+.populares__botao:hover {
+  background: #fff;
+}
+
+@media screen and (min-width: 0px) {
+  .populares__conteudo {
+    flex-direction: column;
+  }
+
+  .populares__card {
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .populares__conteudo {
+    flex-direction: row;
+  }
+
+  .populares__card {
+    margin: 0 1rem 1rem 0;
+    width: calc(50% - 0.5rem);
+  }
+
+  .populares__card:nth-child(2n) {
+    margin: 0 0 1rem 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .populares__card {
+    margin: 0 1rem 0 0;
+    width: calc(20% - 0.8rem);
+  }
+
+  .populares__card:nth-child(2n) {
+    margin: 0 1rem 0 0;
+  }
+}
